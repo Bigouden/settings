@@ -8,7 +8,7 @@ alias vdir='vdir --color=auto'
 alias grep='grep -n --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-alias clone='git clone https://gitlab.com/Bigouden/ansible.git'
+alias clone='git clone --recurse-submodules https://gitlab.com/Bigouden/ansible.git'
 alias docker='sudo docker'
 alias work='docker run \
               -dit \
