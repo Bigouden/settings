@@ -17,6 +17,8 @@ alias work='docker run \
               -v work:/work \
               -v mnt:/mnt \
               --label com.centurylinklabs.watchtower.enable="true" \
+              --dns 172.17.0.1 \
+              --dns 192.168.10.254 \
               --restart unless-stopped \
               registry.gitlab.com/bigouden/ansible-home:daily 2>/dev/null \
               || true && docker exec -it work bash' 
