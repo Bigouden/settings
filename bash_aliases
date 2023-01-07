@@ -18,11 +18,9 @@ alias work='docker run \
               -v mnt:/mnt \
               --label com.centurylinklabs.watchtower.enable="true" \
               --label prometheus.type="exporter" \
-              --network bridge \
-              --network internal \
               --dns 192.168.10.253 \
               --dns 192.168.10.254 \
               --restart unless-stopped \
               registry.gitlab.com/bigouden/ansible-home:daily 2>/dev/null \
-              || true && docker exec -it work bash' 
+              || true && docker network connect internal work && docker exec -it work bash' 
 alias unwork='docker rm --force work'
