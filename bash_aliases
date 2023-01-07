@@ -17,6 +17,9 @@ alias work='docker run \
               -v work:/work \
               -v mnt:/mnt \
               --label com.centurylinklabs.watchtower.enable="true" \
+              --label prometheus.type="exporter" \
+              --network bridge \
+              --network internal \
               --dns 192.168.10.253 \
               --dns 192.168.10.254 \
               --restart unless-stopped \
