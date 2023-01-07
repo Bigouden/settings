@@ -23,6 +23,6 @@ alias work='docker run \
               --restart unless-stopped \
               registry.gitlab.com/bigouden/ansible-home:daily 2>/dev/null \
               || true \
-            && docker network connect internal work || true \
+            && docker network connect internal work 2>/dev/null || true \
             && docker exec -it work bash' 
 alias unwork='docker rm --force work'
