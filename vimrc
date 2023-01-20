@@ -39,3 +39,5 @@ set statusline+=\ %l:%c
 set statusline+=\
 " Separator
 set iskeyword=@,48-57,192-255
+" Disable Bell
+set belloff=all
