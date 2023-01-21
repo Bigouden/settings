@@ -7,6 +7,7 @@ export LS_OPTIONS='--color=auto'
 source /etc/profile.d/bash_completion.sh
 source $HOME/.bash_aliases
 source $HOME/.docker-completion.sh
+source $HOME/.git-completion.sh
 force_color_prompt=yes
 CYAN="\e[36m"
 YELLOW="\e[33m"
