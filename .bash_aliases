@@ -27,4 +27,4 @@ alias work='docker run \
             && docker exec -it work bash' 
 alias unwork='docker rm --force work'
 lock='bw lock && unset BW_SESSION'
-unlock='export BW_SESSION=$(bw unlock --passwordfile /home/ansible/.vaultwarden_pass.txt --raw) && bw sync'
+unlock='export BW_SESSION=$(bw unlock --passwordfile $BW_PASSWORD_FILE --raw) && bw sync'
