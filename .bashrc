@@ -4,7 +4,7 @@ parse_git_branch() {
 
 export PS1="\[\033[0;31m\]\u@\h:\[\033[34m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\]$ "
 export LS_OPTIONS='--color=auto'
-source /etc/profile.d/bash_completion.sh
+source /etc/bash/bash_completion.sh
 source $HOME/.bash_aliases
 source $HOME/.docker-completion.sh
 source $HOME/.git-completion.sh
