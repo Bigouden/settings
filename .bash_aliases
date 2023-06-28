@@ -16,6 +16,8 @@ alias work='docker run \
               --hostname WORK \
               -v work:/work \
               -v mnt:/mnt \
+              -v /etc/localtime:/etc/localtime:ro \
+              -v /etc/timezone:/etc/timezone:ro \
               --label com.centurylinklabs.watchtower.enable="true" \
               --label prometheus.type="exporter" \
               --dns 192.168.10.253 \
