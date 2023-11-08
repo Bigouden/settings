@@ -19,6 +19,8 @@ alias work='docker run \
               -v /etc/localtime:/etc/localtime:ro \
               -v /etc/timezone:/etc/timezone:ro \
               --label com.centurylinklabs.watchtower.enable="true" \
+              --label io.portainer.accesscontrol.teams="Portainer" \
+              --label cadvisor.metrics="true" \
               --label prometheus.type="exporter" \
               --dns 192.168.10.253 \
               --dns 192.168.10.254 \
