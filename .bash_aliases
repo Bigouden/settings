@@ -32,3 +32,4 @@ alias work='docker run \
 alias unwork='docker rm --force work'
 alias lock='bw lock && unset BW_SESSION'
 alias unlock='export BW_SESSION=$(bw unlock --passwordfile $BW_PASSWORD_FILE --raw) && bw sync'
+alias purge='apt-get remove -y --purge $(dpkg -l | awk "/^rc/{print $2}")'
