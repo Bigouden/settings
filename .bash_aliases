@@ -35,3 +35,4 @@ alias unlock='export BW_SESSION=$(bw unlock --passwordfile $BW_PASSWORD_FILE --r
 alias purge='dpkg -l | grep ^rc | awk "{print $2}" | xargs -t sudo apt-get -y purge'
 alias clean_grafana='docker rm --force grafana && docker volume rm --force grafana_dashboards grafana_data grafana_ldap grafana_provisioning'
 alias bw='NODE_OPTIONS="--no-deprecation" bw'
+alias login='bw login --apikey'
